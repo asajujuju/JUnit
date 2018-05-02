@@ -5,7 +5,7 @@ public class SnakeCamelUtil {
 	public static String snakeToCamelcase(String snake_case) {
 		String[] words = snake_case.split("_");//words[0]=abc, words[1]=def, words[2]=ghi
 		StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < words.length-1; i++) {
+		for (int i = 0; i < words.length; i++) {
 			sb.append(capitalize(words[i]));
 		}
 		return new String(sb); //ひとつの単語にまとめる(AbcDefGhi)
