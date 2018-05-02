@@ -17,13 +17,17 @@ public class SnakeCamelUtil {
 			for (int i = 0; i < camelcase.length(); i++) {
 				char c = camelcase.charAt(i);//camelのi番目を抜き出す
 				if (Character.isUpperCase(c)) { //大文字なら
+					
+				 if(j!=i){
 						sb.append(camelcase.substring(j, i));//camelcaseのj~iまでの文字を加える(iは含まれない)
 					if (sb.length() > 0) {
 						sb.append("_");
 					}
+				 }
 					sb.append(Character.toLowerCase(c));//小文字に変換
-					j=i;
+					j=i+1;
 				}
+				
 			}
 			sb.append(camelcase.substring(j));//j番目から末尾まで
 			return new String(sb);
