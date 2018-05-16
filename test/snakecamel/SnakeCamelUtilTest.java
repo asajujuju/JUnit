@@ -21,6 +21,6 @@ public class SnakeCamelUtilTest {
    	 String expected = "hot_dog";
    	 String actual = scu.camelToSnakecase("HotDog");
    	 assertThat(actual, is(expected));
-    } 
-
+	}
+	
 }
